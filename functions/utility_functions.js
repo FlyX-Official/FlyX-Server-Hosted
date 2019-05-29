@@ -27,6 +27,10 @@ module.exports.getUnique = function (arr, comp) {
   }
 
  module.exports.parseAirportInput = function (inputString) {
+
+    // if (inputString.indexOf(' ') == -1){
+    //   return inputString;
+    // }
     let parts = inputString.split(" ");
     let code = parts[parts.length-1];
     return code;
@@ -37,7 +41,7 @@ module.exports.getUnique = function (arr, comp) {
    let airportCodes = []
 
    arr.forEach(element => {
-     airportCodes.push(element._source.AirportCode);
+     airportCodes.push(element._source.IATA);
    });
 
    return airportCodes;
